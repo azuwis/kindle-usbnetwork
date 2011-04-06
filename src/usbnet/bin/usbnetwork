@@ -1,0 +1,201 @@
+#!/bin/sh
+#
+# Toggle from USB mass storage to USB network
+#
+# $Id: usbnetwork 7376 2011-03-23 01:08:12Z NiLuJe $
+#
+##
+
+# Pull some helper functions for logging
+_FUNCTIONS=/etc/rc.d/functions
+[ -f ${_FUNCTIONS} ] && . ${_FUNCTIONS}
+
+# Don't do crazy stuff because of the FW 3.x usbnetd init script...
+if [ "$1" == "status" ] ; then
+    msg "we're not using usbnetd, go away" I
+
+    # Yeah, actually, we need to return !0, that's the whole point...
+    return 1
+fi
+
+# Config
+USBNET_BASEDIR="/mnt/us/usbnet"
+USBNET_BINDIR="${USBNET_BASEDIR}/bin"
+
+SSH_DAEMON="/usr/bin/dropbear"
+REAL_SSH_DAEMON="/mnt/us/usbnet/bin/dropbearmulti"
+SSH_PID="${USBNET_BASEDIR}/run/sshd.pid"
+SSH_DAEMON_OPTS="-P ${SSH_PID}"
+TELNET_DAEMON="${USBNET_BINDIR}/busybox"
+TELNET_DAEMON_OPTS="telnetd -F"
+TELNET_PID="${USBNET_BASEDIR}/run/telnetd.pid"
+
+USBNET_IFCONFIG="${USBNET_BASEDIR}/etc/config"
+
+
+# Load config...
+if [ -f "${USBNET_IFCONFIG}" ] ; then
+    # dos2unix...
+    sed -e "s/$(echo -ne '\r')$//g" -i ${USBNET_IFCONFIG}
+    . ${USBNET_IFCONFIG}
+else
+    msg "!! your usbnet config is missing, we'll use the default values" W
+fi
+
+# Sanitize our user input, in case something stupid happened to the config file (like Windows...)
+# NOTE: This is obviously the fallback to default config values. Don't edit me here, that won't do a thing.
+# The live config is located in usbnet/etc/config
+if [ -z "${HOST_IP}" ] ; then
+    HOST_IP=192.168.2.1
+    msg "!! your usbnet config is broken, restoring HOST_IP to default value" W
+fi
+if [ -z "${KINDLE_IP}" ] ; then
+    KINDLE_IP=192.168.2.2
+    msg "!! your usbnet config is broken, restoring KINDLE_IP to default value" W
+fi
+# Be very strict here, we only accept "true" and "false", everything else will be considered "false"!
+if [ "${K3_WIFI}" != "true" ] ; then
+    # Don't throw a fuss if we deliberately set this to "false"
+    if [ "${K3_WIFI}" != "false" ] ; then
+        K3_WIFI="false"
+        msg "!! your usbnet config is broken, restoring K3_WIFI to default value" W
+    fi
+fi
+if [ "${K3_WIFI_SSHD_ONLY}" != "true" ] ; then
+    if [ "${K3_WIFI_SSHD_ONLY}" != "false" ] ; then
+        K3_WIFI_SSHD_ONLY="false"
+        msg "!! your usbnet config is broken, restoring K3_WIFI_SSHD_ONLY to default value" W
+    fi
+fi
+
+# Add the nopasswd flag to dropbear if we're not using WiFi
+if [ "${K3_WIFI}" == "false" ] ; then
+    SSH_DAEMON_OPTS="${SSH_DAEMON_OPTS} -n"
+fi
+
+# USB NET => USB MS
+usbnet_to_usbms() {
+    msg "switching from usbnet to usbms" I
+    # Do we only have an SSHD to kill?
+    if [ "${K3_WIFI_SSHD_ONLY}" != "true" ] ; then
+        # Stop USB Network IF
+        msg "bringing usb0 interface down" I
+        ifconfig usb0 down || exit 1
+
+        # Unload ethernet gadget and load mass storage one
+        msg "unloading g_ether module" I
+        rmmod g_ether || exit 1
+        msg "loading g_file_storage module" I
+        modprobe g_file_storage || exit 1
+
+        # Stop telnet & ssh daemons
+        msg "stopping telnetd" I
+        /sbin/start-stop-daemon -q -p ${TELNET_PID} -x ${TELNET_DAEMON} -K
+        # The pid was created via start-stop-daemon's -m feature, and busybox's start-stop-daemon doesn't remove the pidfile on kill
+        if [ -f ${TELNET_PID} ] ; then
+            msg "cleaning stale telnetd pidfile" I
+            rm -f ${TELNET_PID}
+        fi
+    fi
+
+    msg "stopping sshd" I
+    /sbin/start-stop-daemon -q -p ${SSH_PID} -x ${REAL_SSH_DAEMON} -K
+
+    # Restore iptables config
+    if [ "${K3_WIFI}" == "true" ] ; then
+        msg "restoring iptables config" I
+        iptables -D INPUT -i wlan0 -p tcp --dport ssh -j ACCEPT
+    fi
+}
+
+# USB MS => USB NET
+usbms_to_usbnet() {
+    if [ "${K3_WIFI_SSHD_ONLY}" != "true" ] ; then
+        msg "switching from usbms to usbnet" I
+    else
+        msg "toggling sshd status" I
+    fi
+    # Do we only want an SSHD?
+    if [ "${K3_WIFI_SSHD_ONLY}" != "true" ] ; then
+        # Unload mass storage gadget and load ethernet one
+        msg "unloading g_file_storage module" I
+        rmmod g_file_storage || exit 1
+        msg "loading g_ether module" I
+        modprobe g_ether host_addr='EE4900000000' dev_addr='EE1900000000' || exit 1
+
+        # Start USB Network IF
+        msg "bringing usb0 interface up" I
+        ifconfig usb0 ${KINDLE_IP} || exit 1
+
+        # Start telnet & ssh daemons
+        [ -x ${USBNET_BINDIR}/busybox ] || chmod +x ${USBNET_BINDIR}/busybox
+        # Kill stale pidfile before starting
+        if [ -f ${TELNET_PID} ] ; then
+            msg "removing stale telnetd pidfile" W
+            rm -f ${TELNET_PID}
+        fi
+        msg "starting telnetd" I
+        /sbin/start-stop-daemon -m -q -p ${TELNET_PID} -x ${TELNET_DAEMON} -S -b -- ${TELNET_DAEMON_OPTS}
+    fi
+
+    [ -x /usr/bin/dropbear ] || chmod +x /usr/bin/dropbear
+    # If we're in SSHD only mode, we'll get here *every* usbNetwork call, since we never load g_ether.
+    # So make sure we toggle SSHD start/stop instead
+    if [ -f ${SSH_PID} ] ; then
+        msg "stopping sshd" I
+        /sbin/start-stop-daemon -q -p ${SSH_PID} -x ${REAL_SSH_DAEMON} -K
+        # Make some noise if we *still* have a pidfile (pid mismatch? stale pidfile? crashed/broken dropbear?)
+        if [ -f ${SSH_PID} ] ; then
+            # Check if it's alive, and ours
+            pid=$( cat ${SSH_PID} )
+            # Kill stale pidfile
+            msg "removing stale sshd pidfile" W
+            rm -f ${SSH_PID}
+            # If we do indeed have one, then check that it's really dropbear
+            if ps -fp ${pid} | grep -e "dropbear" > /dev/null 2>&1 ; then
+                msg "killing stale dropbear sshd (${pid})" W
+                kill -KILL ${pid} 2> /dev/null
+            else
+                # It's not ours, so assume the pidfile is really stale, from a crash/hard-reboot, and that we want to *start* SSHD...
+                msg "starting sshd" I
+                /sbin/start-stop-daemon -q -p ${SSH_PID} -x ${SSH_DAEMON} -S -- ${SSH_DAEMON_OPTS}
+            fi
+        fi
+    else
+        msg "starting sshd" I
+        /sbin/start-stop-daemon -q -p ${SSH_PID} -x ${SSH_DAEMON} -S -- ${SSH_DAEMON_OPTS}
+    fi
+
+    # Allow SSH via WiFi
+    if [ "${K3_WIFI}" == "true" ] ; then
+        msg "tweaking iptables config" I
+        iptables -A INPUT -i wlan0 -p tcp --dport ssh -j ACCEPT
+    fi
+}
+
+# Go back to USB MS on stop, in order to fix the 'nothing exported over usbms' issue after an update.
+# That's because volumd, which is started on rc5 before us, *needs* g_file_storage loaded, or it won't properly setup the USBMS export.
+# The cleanest way to make evryong happy is to just go back to USB MS before entering the update runlevel.
+if [ "$1" == "usbms" ] ; then
+    # We only want to switch back to USB MS
+    if lsmod | grep g_ether > /dev/null ; then
+        # Send a broadcast to notify users who skipped reading the manual, because that's a BadThing(TM)...
+        # Basically, don't boot/go through rc5 while plugged to a computer, if you don't want to risk volumd pulling crazy stunts.
+        wall "We're switching back to USB MS, so if you're wondering why your terminal is frozen, go read the docs!"
+        usbnet_to_usbms
+    else
+        msg "usbnet is already stopped" I
+    fi
+
+    # Go away, we wouldn't want to re-toggle after that ;).
+    return 0
+fi
+
+# Check if we're already in USB network mode, then return to USB Mass storage
+if lsmod | grep g_ether > /dev/null ; then
+    usbnet_to_usbms
+else
+    usbms_to_usbnet
+fi
+
+exit 0

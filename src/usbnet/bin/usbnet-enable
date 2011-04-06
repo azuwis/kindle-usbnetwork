@@ -1,0 +1,62 @@
+#!/bin/sh
+#
+# $Id: usbnet-enable 7376 2011-03-23 01:08:12Z NiLuJe $
+#
+
+# Pull some helper functions for logging
+_FUNCTIONS=/etc/rc.d/functions
+[ -f ${_FUNCTIONS} ] && . ${_FUNCTIONS}
+
+# Config
+USBNET_BASEDIR="/mnt/us/usbnet"
+USBNET_IFCONFIG="${USBNET_BASEDIR}/etc/config"
+
+# Load IP config.
+if [ -f "${USBNET_IFCONFIG}" ] ; then
+    # dos2unix...
+    sed -e "s/$(echo -ne '\r')$//g" -i ${USBNET_IFCONFIG}
+    . ${USBNET_IFCONFIG}
+else
+    msg "!! your usbnet config is missing, we'll use the default values" W
+fi
+
+# Sanitize user input
+if [ -z "${HOST_IP}" ] ; then
+    HOST_IP=192.168.2.1
+    msg "!! your usbnet config is broken, restoring HOST_IP to default value" W
+fi
+if [ -z "${KINDLE_IP}" ] ; then
+    KINDLE_IP=192.168.2.2
+    msg "!! your usbnet config is broken, restoring KINDLE_IP to default value" W
+fi
+
+# Enable USB network tethering
+msg "enabling USB network tethering..." I
+
+# Setup default gw (computer)
+route add default gw ${HOST_IP}
+
+mntroot rw
+
+# Use OpenDNS
+echo nameserver 208.67.222.222 > /etc/resolv.d/resolv.conf.default
+echo nameserver 208.67.220.220 >> /etc/resolv.d/resolv.conf.default
+
+# Handle K3?
+for platform in mario luigi ; do
+    fwk_cfg="/opt/amazon/ebook/config/framework.${platform}.conf"
+    if [[ -f "${fwk_cfg}" ]] ; then
+        msg "tweaking ${platform} config" I
+        sed -e "s/USE_WAN : true/USE_WAN : false/g" -i "${fwk_cfg}"
+    fi
+done
+
+mntroot ro
+
+cp /etc/resolv.d/resolv.conf.default /var/run/resolv.conf
+
+msg "done! restarting the framework..." I
+
+sync
+
+/etc/init.d/framework restart

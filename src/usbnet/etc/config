@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# $Id: config 6984 2010-10-18 04:28:22Z NiLuJe $
+#
+
+# WARNING: Take note that we're essentially a shell script, se we absolutely *MUST* use UNIX line endings!
+# WARNING: To avoid leaving your system in an undefined state,
+#          do *NOT* modify this file while usb over ethernet is enabled!
+#          (That means when the the auto enable feature is in use, too!)
+
+# Tweak these to match your setup (IPv4 only, no hostname aliases)
+HOST_IP=192.168.2.1
+KINDLE_IP=192.168.2.2
+
+# Allow SSH over WiFi
+# NOTE: If you set this to true, the SSHD *WILL* check your passwords!
+# Make sure you know your root password, or auth via shared keys!
+# Leave it to false on non-WiFi devices
+K3_WIFI="false"
+
+# Don't switch to Ethernet over USB, and only launch SSHD
+# NOTE: Make sure you're able to properly login over SSH before enabling this...
+# It's obviously only useful with WiFi devices, so leave to false on non-WiFi devices
+K3_WIFI_SSHD_ONLY="false"

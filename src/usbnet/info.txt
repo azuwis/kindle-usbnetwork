@@ -1,0 +1,14 @@
+$Id: info.txt 7343 2011-03-03 17:34:57Z NiLuJe $
+
+Hello! If you're wondering what all this weird stuff on your Kindle is,
+I'm a usbnetwork hack! There's a good chance that I came from here:
+http://www.mobileread.com/forums/showthread.php?t=88004
+
+I'm at version 0.32.N, so, if you wish to uninstall me, you'll at least need
+the uninstaller from that version.
+
+NOTE: Rename the 'DISABLED_auto' file to 'auto' if you want your Kindle to act
+as Ethernet Over USB instead of Mass Storage USB by default.
+Make sure you config is sane before doing this, though.
+
+-- NiLuJe

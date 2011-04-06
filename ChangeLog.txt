@@ -1,0 +1,1512 @@
+2011-03-23 01:08  NiLuJe
+
+	* [r7377] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CL
+
+2011-03-23 01:08  NiLuJe
+
+	* [r7376] src/usbnet/bin/usbnet-disable, src/usbnet/bin/usbnet-enable,
+	  src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * JailBreak:
+	  * Fix the dos2unix sed script to work with busybox's crappy sed
+	  implementation
+	  * Fonts & ScreenSavers:
+	  * Update whitelist
+	  * USBNetwork:
+	  * Do a dos2unix run on the config file before source'ing it
+
+2011-03-07 21:15  NiLuJe
+
+	* [r7362] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CL
+	  * Update MR Thread
+
+2011-03-03 17:34  NiLuJe
+
+	* [r7343] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Tag v0.32.N
+	  * Update MR Thread
+
+2011-03-03 17:33  NiLuJe
+
+	* [r7342] src/usbnet/bin/dropbearmulti:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Update dropbear
+	  * X-TC:
+	  * Bump dropbear to 0.53.1
+
+2011-03-01 15:12  NiLuJe
+
+	* [r7328] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CL
+
+2011-03-01 15:09  NiLuJe
+
+	* [r7327] src/install.sh:
+	  
+	  Kindle Hacks:
+	  * Fonts & USBNetwork:
+	  * Use a more robust method when verifying checksums to detect custom
+	  content during install
+
+2011-03-01 14:02  NiLuJe
+
+	* [r7325] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CL
+
+2011-02-28 19:37  NiLuJe
+
+	* [r7321] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CL
+
+2011-02-28 16:11  NiLuJe
+
+	* [r7319] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CL
+
+2011-02-28 15:41  NiLuJe
+
+	* [r7317] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CL
+
+2011-02-28 14:48  NiLuJe
+
+	* [r7315] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CL
+
+2011-02-27 20:09  NiLuJe
+
+	* [r7313] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CL
+
+2011-02-27 19:31  NiLuJe
+
+	* [r7312] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * Fonts:
+	  * Tag v4.3.N
+	  * ScreenSavers:
+	  * Tag v0.19.N
+	  * USBNetwork:
+	  * Tag v0.31.N
+	  * Update MR Thread
+
+2011-02-27 19:18  NiLuJe
+
+	* [r7311] src/usbnet/bin/busybox, src/usbnet/bin/dropbearmulti,
+	  src/usbnet/bin/htop, src/usbnet/bin/rsync, src/usbnet/bin/sftp-server:
+	  
+	  Kindle Hacks:
+	  * Fonts:
+	  * Update FreeType libs
+	  * Update fc-scan
+	  * ScreenSavers:
+	  * Update sort
+	  * USBNetwork:
+	  * Update sftp-server
+	  * Update dropbear
+	  * Update htop
+	  * Update busybox
+	  * Update rsync
+	  * X-TC:
+	  * Update to use the latest versions of a whole bunch of stuff ;)
+
+2010-11-20 00:29  NiLuJe
+
+	* [r7240] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-11-20 00:28  NiLuJe
+
+	* [r7238] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-11-19 22:46  NiLuJe
+
+	* [r7236] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-11-19 02:03  NiLuJe
+
+	* [r7216] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-11-19 02:01  NiLuJe
+
+	* [r7214] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-11-16 04:46  NiLuJe
+
+	* [r7196] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Udate MR Thread
+	  * Update ChangeLogs
+
+2010-11-11 07:33  NiLuJe
+
+	* [r7158] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-11-11 07:31  NiLuJe
+
+	* [r7157] README_FIRST.txt, src/build-updates.sh, src/install.sh,
+	  src/uninstall.sh, src/usbnet/bin/usbnetwork, src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Oops. Drop forgotten unreachable dead code.
+	  * Tag v0.30.N
+
+2010-11-11 04:54  NiLuJe
+
+	* [r7156] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-11-11 04:53  NiLuJe
+
+	* [r7155] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Sigh. Fix the usbnetd call again. I'm stupid.
+
+2010-11-11 04:25  NiLuJe
+
+	* [r7154] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-11-11 04:23  NiLuJe
+
+	* [r7153] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNet:
+	  * Yep. Fix comment.
+
+2010-11-11 04:22  NiLuJe
+
+	* [r7152] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNet:
+	  * Yeah, no, that probablt wouldn't help. Just don't
+	  go through rc5 while plugged in...
+
+2010-11-11 03:37  NiLuJe
+
+	* [r7151] README_FIRST.txt, src/install.sh, src/uninstall.sh,
+	  src/usbnet-init, src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Fix the "nothing exporte over usbms" issue after an update.
+
+2010-11-11 03:03  NiLuJe
+
+	* [r7150] README_FIRST.txt, src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Document the whole update/volumd == nothing exported over usbms
+	  issue...
+
+2010-11-11 02:33  NiLuJe
+
+	* [r7149] README_FIRST.txt:
+	  
+	  Kindle Hacks:
+	  * USBNet:
+	  * Add a note about booting with usb plugged == fail ;).
+
+2010-11-11 02:19  NiLuJe
+
+	* [r7148] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-11-10 23:31  NiLuJe
+
+	* [r7143] src/install.sh, src/uninstall.sh, src/usbnet-init,
+	  src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * *Really* properly fix the autoboot feature. In fact,
+	  we just have to do our stuff *after* volumd has started,
+	  and don't try to mess with the module params. There's some
+	  tricky stuff involved with the loopdev and the fuse mount
+	  that I don't fully get the point of, but at least, this way
+	  it works, and we're up before the framework.
+
+2010-11-10 21:59  NiLuJe
+
+	* [r7140] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+	  * Update MR Thread, in preparation of release.
+
+2010-11-10 08:20  NiLuJe
+
+	* [r7134] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Return with 0 instead of 1 as exit status when tweaking iptables,
+	  or being called for usbnetd, it's not really an error.
+
+2010-11-10 04:06  NiLuJe
+
+	* [r7132] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNet:
+	  * Add a logmsg when !wifi on rc5
+
+2010-11-10 04:03  NiLuJe
+
+	* [r7131] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNet:
+	  * Tag v0.29.N
+
+2010-11-10 03:58  NiLuJe
+
+	* [r7129] src/install.sh, src/uninstall.sh, src/usbnet-init,
+	  src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Properly fix the autoboot feature to once again startup @ rcS,
+	  without any issues when switching back to usbms.
+	  * But keep the rc5 script, because we need it to fix iptables on the
+	  K3.
+	  Try to implement that nicely without an extra init script, just a
+	  symlink.
+
+2010-11-09 21:40  NiLuJe
+
+	* [r7124] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * Fonts, SS & USBNet:
+	  * Simplify all the redundants if $? -eq 0 tests.
+	  That's what an if block already does, tests if the
+	  exit status of a list of commands is equal to 0, so there's
+	  no need to explicitely re-state that ourselves.
+	  Only keep it in the install scripts when there's a subshell involved,
+	  because I'm not so sure about the subshell thingy as a test condition
+	  ;).
+
+2010-11-07 13:00  NiLuJe
+
+	* [r7111] src/usbnet/bin/dropbearmulti:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Passwordless login when connecting from localhost.
+	  (For AjaxTerm over WiFi)
+
+2010-11-07 00:44  NiLuJe
+
+	* [r7098] src/usbnet/bin/busybox, src/usbnet/bin/dropbearmulti,
+	  src/usbnet/bin/htop, src/usbnet/bin/lsof, src/usbnet/bin/rsync,
+	  src/usbnet/bin/sftp-server:
+	  
+	  Kindle Hacks:
+	  * Fonts:
+	  * Update fc-scan binary (Updated TC, FT, FC & half-shared linked)
+	  * ScreenSavers:
+	  * Update sort binary (Updated TC, Coreutils)
+	  * USBNetwork:
+	  * Updated all the binaries (Updated TC)
+	  * The busybox binary now supports the httpd applet.
+
+2010-10-25 21:51  NiLuJe
+
+	* [r7048] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-25 21:51  NiLuJe
+
+	* [r7047] README_FIRST.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * More readme tweaks
+
+2010-10-25 20:53  NiLuJe
+
+	* [r7046] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-25 20:49  NiLuJe
+
+	* [r7044] README_FIRST.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Fix a few typos in the readme
+
+2010-10-25 20:21  NiLuJe
+
+	* [r7043] README_FIRST.txt[ADD], README_INSTALL.txt[DEL],
+	  README_OLD.txt[CPY], src/build-updates.sh, src/install.sh,
+	  src/uninstall.sh, src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Write a proper up to date readme.
+	  * Tag v0.28.N
+
+2010-10-25 19:39  NiLuJe
+
+	* [r7042] src/uninstall.sh, src/usbnet/bin/usbnet-disable,
+	  src/usbnet/bin/usbnet-enable:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Cleanup tethering script. Enable proper logging.
+	  Don't die horribly on K3 devices. (And possibly do
+	  something useful on K3 devices too...)
+
+2010-10-19 20:51  NiLuJe
+
+	* [r7003] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update MR Thread for jb release.
+
+2010-10-19 04:06  NiLuJe
+
+	* [r7002] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-18 21:45  NiLuJe
+
+	* [r6996] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-18 21:44  NiLuJe
+
+	* [r6995] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Tag v0.27.N
+
+2010-10-18 21:42  NiLuJe
+
+	* [r6994] src/usbnet-init:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * No need to touch mntroot, the rc handler takes care of
+	  that for us.
+
+2010-10-18 20:33  NiLuJe
+
+	* [r6993] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-18 20:33  NiLuJe
+
+	* [r6992] src/build-updates.sh:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Urgh. Forgot to tag the packager to v0.26.N
+
+2010-10-18 20:31  NiLuJe
+
+	* [r6991] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-18 20:11  NiLuJe
+
+	* [r6990] src/usbnet-init:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Oops, probably need a rw rootfs to fix
+	  the usbNetwork private command ;)
+
+2010-10-18 19:54  NiLuJe
+
+	* [r6988] src/install.sh, src/uninstall.sh, src/usbnet-init,
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Make sure the usbNetwork private command symlink
+	  is working.
+	  * Tag v0.26.N
+
+2010-10-18 05:00  NiLuJe
+
+	* [r6987] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-18 04:59  NiLuJe
+
+	* [r6986] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Fix a stupid typo
+
+2010-10-18 04:33  NiLuJe
+
+	* [r6985] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Update config file md5 sum
+	  * Tag v0.25.N
+
+2010-10-18 04:28  NiLuJe
+
+	* [r6984] src/install.sh, src/usbnet/bin/usbnetwork,
+	  src/usbnet/etc/config:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Make the config sanitization a bit more fool-proof,
+	  and throw a huge fuss in the logs when the config
+	  is broken.
+	  * Try to make the config file warnings even more obvious...
+
+2010-10-18 03:41  NiLuJe
+
+	* [r6983] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Try to sanitize user-supplied info from the config file,
+	  to avoid potential issues with unwary peoples that don't
+	  read comments...
+
+2010-10-09 21:24  NiLuJe
+
+	* [r6956] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-09 21:23  NiLuJe
+
+	* [r6955] src/usbnet/etc/htoprc[ADD]:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Bundle a slightly tweaked htop config
+	  * Tag v0.24.N
+
+2010-10-09 21:15  NiLuJe
+
+	* [r6954] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet/bin/busybox, src/usbnet/bin/htop, src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Force htop to use a config file located in the userstore,
+	  to avoid the default ~/.htoprc going poof on reboot because
+	  root's home is in a tmpfs partition.
+	  * Really make telnetd use a proper login shell instead of
+	  just calling sh
+
+2010-10-04 23:00  NiLuJe
+
+	* [r6941] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLog
+
+2010-10-04 20:31  NiLuJe
+
+	* [r6938] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-02 03:33  NiLuJe
+
+	* [r6928] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-02 03:32  NiLuJe
+
+	* [r6927] src/install.sh, src/uninstall.sh:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Fix upgrade path.
+	  Stupid busybox rm that doesn't support the -v flag
+
+2010-10-02 03:12  NiLuJe
+
+	* [r6926] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-02 03:09  NiLuJe
+
+	* [r6925] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet-wifi-init[DEL], src/usbnet/bin/usbnet-wifi[DEL],
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * When using autostart, start in rc5, after the framework,
+	  instead of very early in rcS. Hopefully that'll fix the
+	  'nothing exported over USB MS' issue.
+	  And that makes our ugly K3 WiFi fix useless,
+	  so there's that too ;)
+	  * Tag v0.23.N
+
+2010-10-01 16:27  NiLuJe
+
+	* [r6923] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-10-01 16:24  NiLuJe
+
+	* [r6922] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Somewhat unbreak the config file checks to keep
+	  custom content during the install process...
+	  I'd completely forgot about it, so the checksums
+	  were waaaaay out of date. -_-"
+
+2010-09-30 21:15  NiLuJe
+
+	* [r6914] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+	  * Packager:
+	  * Package the font packager
+
+2010-09-30 16:53  NiLuJe
+
+	* [r6910] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update Cls
+	  * Update MR Thread
+
+2010-09-30 16:46  NiLuJe
+
+	* [r6909] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet-wifi-init[ADD], src/usbnet/bin/usbnet-wifi[ADD],
+	  src/usbnet/bin/usbnetwork, src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Fix SSHD stale pidfile handling. Should now properly
+	  start after a crash/hard-reboot. :)
+	  * Fix SSH over WiFi when using the auto feature
+	  * Tag v0.21.N
+
+2010-09-29 20:43  NiLuJe
+
+	* [r6905] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-29 20:41  NiLuJe
+
+	* [r6904] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet/bin/htop, src/usbnet/etc/config,
+	  src/usbnet/etc/terminfo[ADD], src/usbnet/etc/terminfo/x[ADD],
+	  src/usbnet/etc/terminfo/x/xterm[ADD], src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Make htop use a custom terminfo db, with a proper
+	  recent xterm def for color support :).
+	  * Bundle said terminfo db (with only xterm, that's what
+	  TERM is set to on the Kindle)
+	  * Make it clear that the config file is a shell script,
+	  and thus must use UNIX style line endings.
+	  * Tag v0.20.N
+	  * Update MR Thread
+
+2010-09-28 19:14  NiLuJe
+
+	* [r6901] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-28 19:11  NiLuJe
+
+	* [r6900] src/install.sh, src/uninstall.sh:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Installs/uninstalls htop, rsync & lsof symlinks (in $PATH)
+
+2010-09-28 19:03  NiLuJe
+
+	* [r6899] README, src/install.sh, src/uninstall.sh,
+	  src/usbnet/bin/lsof[ADD]:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Bundle lsof
+	  * x-compile:
+	  * Build lsof
+
+2010-09-28 18:36  NiLuJe
+
+	* [r6898] README, src/build-updates.sh, src/install.sh,
+	  src/usbnet/bin/dropbearmulti, src/usbnet/bin/htop[ADD],
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Fix scp (again) to dropbear.
+	  * Bundle htop, because htop rocks. :D
+
+2010-09-28 16:18  NiLuJe
+
+	* [r6896] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-28 16:17  NiLuJe
+
+	* [r6895] src/build-updates.sh, src/install.sh,
+	  src/usbnet/bin/usbnetwork, src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Make it clear that trying to edit the config in the usbnetwork
+	  script itself won't do a thing, the proper config is located in
+	  usbnet/etc/config ;).
+	  * Properly handle fw 3.x's usbnetd init script probings, to avoid
+	  doing an unnecessary start/stop cycle during reboot/shutdowns.
+	  * Tag v0.18.N
+
+2010-09-27 22:23  NiLuJe
+
+	* [r6893] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-27 22:19  NiLuJe
+
+	* [r6892] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNet:
+	  * Go back to using rmmod instead of modprobe -r
+	  (It's a bit faster because it doesn't unload/reload the
+	  usb controller driver, and that in turn doesn't make
+	  the battery check warning popup on the K3 ;))
+
+2010-09-27 21:58  NiLuJe
+
+	* [r6891] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Don't log a misleading msg when in SSHD only mode
+
+2010-09-27 21:55  NiLuJe
+
+	* [r6890] src/build-updates.sh, src/install.sh,
+	  src/usbnet/bin/usbnetwork, src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Log to syslog
+	  * Fix toggle when in SSHD only mode. It'll now
+	  properly toggle sshd on/off and not try to launch
+	  sshd over and over ;).
+	  * Tag v0.17.N
+
+2010-09-27 18:20  NiLuJe
+
+	* [r6888] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-27 18:20  NiLuJe
+
+	* [r6887] README_INSTALL.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Flesh out the README a bit
+
+2010-09-26 14:49  NiLuJe
+
+	* [r6884] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-26 14:45  NiLuJe
+
+	* [r6883] src/install.sh, src/usbnet/bin/dropbearmulti:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Drop scp applet from dopbear, the Kindle's busybox already
+	  has the scp applet compiled in...
+
+2010-09-26 14:40  NiLuJe
+
+	* [r6882] src/usbnet/bin/dropbearmulti:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Make SSHD show /etc/issue by default
+
+2010-09-26 14:27  NiLuJe
+
+	* [r6881] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet/bin/usbnetwork, src/usbnet/etc/config, src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * New config option to only launch an SSHD,
+	  and stay in USB MS mode. (Useful with WiFi devices)
+	  * Tag v0.16.N
+
+2010-09-26 01:47  NiLuJe
+
+	* [r6879] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-26 01:43  NiLuJe
+
+	* [r6878] src/usbnet/bin/dropbearmulti:
+	  
+	  Kindle Hacks:
+	  * USBNet:
+	  * Fix dropbear pubkey support
+
+2010-09-26 00:19  NiLuJe
+
+	* [r6877] README_INSTALL.txt, src/build-updates.sh, src/install.sh,
+	  src/usbnet/bin/dropbearmulti, src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Shared key auth support for SSH/SFTP.
+	  (Store your pubkeys in usbnet/etc/authorized_keys)
+	  * Tag v0.15.N
+
+2010-09-25 23:37  NiLuJe
+
+	* [r6874] src/usbnet/bin/busybox:
+	  
+	  Kindle Hacks:
+	  * USBNet:
+	  * Fix telnetd
+
+2010-09-25 22:41  NiLuJe
+
+	* [r6873] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-25 22:39  NiLuJe
+
+	* [r6871] src/usbnet/bin/usbnetwork, src/usbnet/etc/config:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Update comments regarding new sshd binary & WiFi mode
+	  * Tag v0.14.N
+
+2010-09-25 22:36  NiLuJe
+
+	* [r6870] src/build-updates.sh, src/install.sh,
+	  src/usbnet/bin/dropbearmulti, src/usbnet/bin/usbnetwork,
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * Use new dropbear binary (skips passwd auth via a cmdline flag, scp
+	  client)
+	  * Meaning we now have a SSHD that *WILL* check passwords when in WiFi
+	  mode,
+	  and that will let you through without a pass when not. ;).
+	  * Also, we now install an scp client (dbscp)
+
+2010-09-25 22:24  NiLuJe
+
+	* [r6865] src/usbnet/bin/busybox, src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Rebuild busbox telnetd with a patched login applet instead
+	  of using /bin/sh as a login command
+
+2010-09-24 00:52  NiLuJe
+
+	* [r6855] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-23 23:50  NiLuJe
+
+	* [r6850] src/usbnet/etc/config:
+	  
+	  Kindle Hacks:
+	  * USBNet:
+	  * Fix a typo in a comment
+
+2010-09-23 23:17  NiLuJe
+
+	* [r6848] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-09-23 23:16  NiLuJe
+
+	* [r6847] src/build-updates.sh, src/install.sh, src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * Tag Fonts v3.9.N
+	  * Tag ScreenSavers v0.14.N
+	  * Tag USBNet v0.13.N
+
+2010-09-23 22:37  NiLuJe
+
+	* [r6841] src/usbnet/bin/usbnetwork, src/usbnet/etc/config:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Support opening up SSH via WiFi via a config switch.
+	  (Disabled by default, because with our default SSHD, it's a
+	  gaping security hole)
+
+2010-09-23 22:06  NiLuJe
+
+	* [r6840] src/install.sh, src/usbnet/bin/usbnetwork,
+	  src/usbnet/run[ADD]:
+	  
+	  Kindle Hacks:
+	  * USBNet:
+	  * Drop pidfiles in usbnet/run
+
+2010-09-23 21:50  NiLuJe
+
+	* [r6839] src/usbnet/bin/busybox, src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNet:
+	  * Restore passwordless telnetd
+
+2010-09-23 21:26  NiLuJe
+
+	* [r6837] src/usbnet/bin/busybox, src/usbnet/bin/dropbearmulti:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Rebuild dropbear & busybox without stack-protector
+
+2010-09-23 21:21  NiLuJe
+
+	* [r6836] src/usbnet/bin/busybox, src/usbnet/bin/dropbearmulti,
+	  src/usbnet/bin/rsync, src/usbnet/bin/sftp-server[ADD]:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Rebuild from scratch dropbear, busybox (telnetd) & rsync.
+	  * And add an sftp-server from OpenSSH (that should be handled by
+	  dropbear).
+	  * x-compile:
+	  * Dynamic builds of zlib, dropbear, busybox, openssl, openssh.
+	  That was fun! Ans surprisingly moderately painless! Yay for gentoo
+	  ebuilds,
+	  because the openssl x-compile is pretty hairy...
+
+2010-09-23 15:09  NiLuJe
+
+	* [r6833] README[ADD]:
+	  
+	  Kindle Hacks:
+	  * README
+
+2010-09-21 23:56  NiLuJe
+
+	* [r6826] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-21 23:32  NiLuJe
+
+	* [r6822] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-21 20:38  NiLuJe
+
+	* [r6812] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-21 18:17  NiLuJe
+
+	* [r6806] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-21 15:34  NiLuJe
+
+	* [r6800] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update Cls.
+	  * Update MR Thread.
+
+2010-09-20 14:26  NiLuJe
+
+	* [r6779] src/install.sh:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Resync the version tag in the install log.
+
+2010-09-19 23:39  NiLuJe
+
+	* [r6777] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update MR thread
+	  * Update CLs
+
+2010-09-18 23:57  NiLuJe
+
+	* [r6768] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-18 23:57  NiLuJe
+
+	* [r6767] src/build-updates.sh, src/kindle_update_tool.py,
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Build for K3.
+	  * Tag v0.12.N
+
+2010-09-18 21:16  NiLuJe
+
+	* [r6766] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-09-18 21:07  NiLuJe
+
+	* [r6764] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-08-30 00:45  NiLuJe
+
+	* [r6685] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-08-30 00:43  NiLuJe
+
+	* [r6683] src/build-updates.sh:
+	  
+	  Kindle Hacks:
+	  * Use variables instead of having to repeat the name of the hack
+	  multiple times
+
+2010-08-26 01:16  NiLuJe
+
+	* [r6669] README_INSTALL[DEL], README_INSTALL.txt[CPY]:
+	  
+	  Kindle Hacks:
+	  * Add a .txt file extention to READMEs & ChangeLogs
+	  * Make READMEs & ChangeLogs use DOS line-endings
+	  (to make Windows default config happy...)
+	  * Remove the "-2.5" from the packages filenames, since
+	  it's not accurate. (Works for pretty much every fw
+	  version. And hopefully it'll work with fw 3.0 ;))
+
+2010-08-11 03:22  NiLuJe
+
+	* [r6633] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-08-10 22:38  NiLuJe
+
+	* [r6631] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-08-10 21:32  NiLuJe
+
+	* [r6629] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-08-10 21:28  NiLuJe
+
+	* [r6627] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-08-10 21:19  NiLuJe
+
+	* [r6624] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-08-07 03:54  NiLuJe
+
+	* [r6615] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-08-07 03:54  NiLuJe
+
+	* [r6614] README_INSTALL[CPY], src/usbnet/README[DEL]:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Move README file to avoid being installed by the updatefile
+
+2010-08-07 03:49  NiLuJe
+
+	* [r6613] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-08-07 03:47  NiLuJe
+
+	* [r6612] src/build-updates.sh, src/install.sh:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * And fix custom directory install here too.
+	  * Fonts/SS:
+	  * And, no, we don't need to wrap the exclude list var inside an echo.
+	  I really need to sleep. -_-"
+
+2010-08-07 01:58  NiLuJe
+
+	* [r6608] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-08-06 23:23  NiLuJe
+
+	* [r6602] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-08-06 23:21  NiLuJe
+
+	* [r6601] src/build-updates.sh:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Fix stupid typo in build script :).
+
+2010-08-06 23:14  NiLuJe
+
+	* [r6598] src/install.sh:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Oops, forgot to cleanup after ourselves ;)
+
+2010-08-06 23:11  NiLuJe
+
+	* [r6597] src/build-updates.sh, src/install.sh, src/uninstall.sh:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Package & install usbnet custom directory in the update binfile
+
+2010-07-28 21:28  NiLuJe
+
+	* [r6576] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CLs
+
+2010-07-28 21:28  NiLuJe
+
+	* [r6575] src/usbnet/DISABLED_auto[CPY], src/usbnet/auto[DEL],
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Disable auto-usbnet by default. And add a note about it in the
+	  info.txt file
+
+2010-07-28 21:23  NiLuJe
+
+	* [r6574] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-28 21:22  NiLuJe
+
+	* [r6573] src/usbnet/bin/usbnet-disable, src/usbnet/bin/usbnet-enable:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Do a FS syn before the fw restarts, just in case.
+
+2010-07-28 21:21  NiLuJe
+
+	* [r6572] src/usbnet/bin/usbnet-disable, src/usbnet/bin/usbnet-enable,
+	  src/usbnet/bin/usbnetwork, src/usbnet/etc/config[ADD]:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * As per pnt's suggestion:
+	  (http://www.mobileread.com/forums/showpost.php?p=1027119&postcount=322)
+	  * Moved Kindle/GW IP config to a dedicated config file
+	  * Moved default gateway override to the tethering scripts
+	  * Made the tethering scripts do a framework restart instead of telling
+	  the user to reboot
+
+2010-07-20 20:28  NiLuJe
+
+	* [r6563] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-20 20:12  NiLuJe
+
+	* [r6561] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-20 20:12  NiLuJe
+
+	* [r6560] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Fonts & SS:
+	  * *sigh* Trap official updates too. (case issue)
+
+2010-07-20 00:18  NiLuJe
+
+	* [r6554] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-19 23:19  NiLuJe
+
+	* [r6552] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLog
+
+2010-07-19 22:50  NiLuJe
+
+	* [r6550] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-18 04:52  NiLuJe
+
+	* [r6530] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-18 04:51  NiLuJe
+
+	* [r6529] src/install.sh:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Fix install script expecting a deprecated and
+	  since removed usbstorage script in the bin dir.
+	  * Fix install script to warn the user if we can't find
+	  our custom usbnet directory (because unlike the classic
+	  usbnet hacks, I stupidly did like my fonts/ss hacks and
+	  let the user handle the copying of the custom directory...
+	  But unlike these hacks, the usbnet hack install script
+	  actually *needs* this folder to be populated beforehand...
+	  Slight fail here. :D)
+	  Also, in that case, make sure we log outside any custom
+	  directory, because obviously we can't output to a directory
+	  that doesn't exists...
+	  * Thanks to mikeage on MR for his detailed report on both these issues
+	  ;)
+	  (http://www.mobileread.com/forums/showpost.php?p=1013361&postcount=258
+
+2010-07-12 04:39  NiLuJe
+
+	* [r6520] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-11 22:51  NiLuJe
+
+	* [r6516] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-11 20:00  NiLuJe
+
+	* [r6504] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Explain why we must cleanup one pidfile and not the other
+
+2010-07-09 18:15  NiLuJe
+
+	* [r6482] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-09 15:46  NiLuJe
+
+	* [r6480] src/kindle_update_tool.py:
+	  
+	  Kindle Hacks:
+	  * Yep. KDX Graphite support works.
+
+2010-07-09 04:31  NiLuJe
+
+	* [r6479] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-09 04:31  NiLuJe
+
+	* [r6478] src/kindle_update_tool.py:
+	  
+	  Kindle Hacks:
+	  * DXg support... Take three.
+
+2010-07-08 22:14  NiLuJe
+
+	* [r6477] src/kindle_update_tool.py:
+	  
+	  Kindle Hacks:
+	  * DXG support, take two. (probably won't work either).
+
+2010-07-08 20:05  NiLuJe
+
+	* [r6475] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-08 20:04  NiLuJe
+
+	* [r6474] src/build-updates.sh, src/kindle_update_tool.py:
+	  
+	  Kindle Hacks:
+	  * Add Kindle DX Graphite support (And hopefully actually working...
+	  ^^)
+
+2010-07-08 01:39  NiLuJe
+
+	* [r6473] src/usbnet/bin/usbnetwork:
+	  
+	  Kinde Hacks:
+	  * USBNetwork:
+	  * Actually, we still need to clean telnetd's pidfile,
+	  because it's created by start-stop-daemon, not telnet itself.
+
+2010-07-08 01:36  NiLuJe
+
+	* [r6472] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Fix killing & cleaning ssh/telnet daemons
+
+2010-07-08 01:24  NiLuJe
+
+	* [r6471] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * USB Network:
+	  * Clean our pidfiles on switch to ms
+
+2010-07-08 00:48  NiLuJe
+
+	* [r6470] src/uninstall.sh:
+	  
+	  Kinde Hacks:
+	  * UBNetwork:
+	  * Fix uninstall log comment
+
+2010-07-08 00:42  NiLuJe
+
+	* [r6469] src/usbnet/bin/usbnetwork:
+	  
+	  Kindle Hacks:
+	  * And adapt comments accordingly ;)
+
+2010-07-08 00:42  NiLuJe
+
+	* [r6468] src/usbnet/bin/usbnetwork, src/usbnet/bin/usbstorage[DEL]:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Make the `usbNetwork command script a toggle, so we
+	  can switch between mass storage and network without rebooting.
+
+2010-07-05 03:32  NiLuJe
+
+	* [r6463] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLog
+
+2010-07-05 02:49  NiLuJe
+
+	* [r6460] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs for the quick fix releases (v3.3.N & v0.6.N).
+	  Forgot to zero-pad the kill init level var. *sigh*
+
+2010-07-04 23:09  NiLuJe
+
+	* [r6457] ChangeLog[ADD]:
+	  
+	  Kindle Hacks:
+	  * Update ChangeLogs
+
+2010-07-04 18:44  NiLuJe
+
+	* [r6453] .[ADD], src[ADD], src/build-updates.sh[ADD],
+	  src/install.sh[ADD], src/kindle_update_tool.py[ADD],
+	  src/uninstall.sh[ADD], src/usbnet[ADD], src/usbnet-init[ADD],
+	  src/usbnet/README[ADD], src/usbnet/auto[ADD], src/usbnet/bin[ADD],
+	  src/usbnet/bin/busybox[ADD], src/usbnet/bin/dropbearmulti[ADD],
+	  src/usbnet/bin/rsync[ADD], src/usbnet/bin/usbnet-disable[ADD],
+	  src/usbnet/bin/usbnet-enable[ADD], src/usbnet/bin/usbnetwork[ADD],
+	  src/usbnet/bin/usbstorage[ADD], src/usbnet/etc[ADD],
+	  src/usbnet/etc/dropbear_dss_host_key[ADD],
+	  src/usbnet/etc/dropbear_rsa_host_key[ADD], src/usbnet/info.txt[ADD]:
+	  
+	  Kindle Hacks:
+	  * Initial import of usbnetwork 0.11 from ebs/jya/clarknova.
+	  * For the moment, just reworked the install/uninstall scripts
+	  to be a bit more clear & commented.
+

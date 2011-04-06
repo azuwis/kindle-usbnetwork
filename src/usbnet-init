@@ -1,0 +1,68 @@
+#!/bin/sh
+#
+# $Id: usbnet-init 7151 2010-11-11 03:37:15Z NiLuJe $
+#
+
+_FUNCTIONS=/etc/rc.d/functions
+[ -f ${_FUNCTIONS} ] && . ${_FUNCTIONS}
+
+USBNET_BASEDIR="/mnt/us/usbnet"
+USBNET_BINDIR="${USBNET_BASEDIR}/bin"
+USBNET_EMERGENCY="${USBNET_BINDIR}/emergency.sh"
+USBNET_ENABLE="${USBNET_BASEDIR}/auto"
+USBNET_SCRIPT="${USBNET_BINDIR}/usbnetwork"
+
+# Make sure the usbNetwork private command will actually work.
+KINDLE_TESTDIR="/test/bin"
+KINDLE_USBNETBIN="${KINDLE_TESTDIR}/usbnetwork"
+USBNET_USBNETBIN="${USBNET_BINDIR}/usbnetwork"
+# (The 3.0.3 fw update removed the /test/bin folder).
+if [ ! -d ${KINDLE_TESTDIR} ] ; then
+    msg "the ${KINDLE_TESTDIR} directory was missing, creating it..." W
+    mkdir -p ${KINDLE_TESTDIR}
+fi
+# And check the actual symlink once we're sure we have the directory needed
+if [ ! -L ${KINDLE_USBNETBIN} ] ; then
+    msg "the usbNetwork private command symlink was missing, creating it..." W
+    ln -fs ${USBNET_USBNETBIN} ${KINDLE_USBNETBIN}
+fi
+
+case "$1" in
+        start)
+                # First things first, check for an emergency script
+                if [ -f ${USBNET_EMERGENCY} ] ; then
+                        # We got one, make it executable and use it
+                        [ -x ${USBNET_EMERGENCY} ] || chmod +x ${USBNET_EMERGENCY}
+                        # Run it...
+                        ${USBNET_EMERGENCY}
+                        # And GET OUT! NOW!
+                        exit 0
+                fi
+                # Everything's fine, yeepee.
+                if [ -f ${USBNET_ENABLE} -a -f ${USBNET_SCRIPT} ] ; then
+                        # We got our script, and we want to use it, so, make it executable
+                        [ -x ${USBNET_SCRIPT} ] || chmod +x ${USBNET_SCRIPT}
+                        # And run it!
+                        ${USBNET_SCRIPT}
+                else
+                        msg "usbnet is disabled" I
+                fi
+        ;;
+        stop)
+                # Don't check for the enable trigger, we may have just removed it, or we may have switched to usbnet manually, and we still need to go back to usbms.
+                if [ -f ${USBNET_SCRIPT} ] ; then
+                        # We got our script, and we want to use it, so, make it executable
+                        [ -x ${USBNET_SCRIPT} ] || chmod +x ${USBNET_SCRIPT}
+                        # And run it!
+                        ${USBNET_SCRIPT} "usbms"
+                else
+                        msg "couldn't stop usbnet" I
+                fi
+        ;;
+        *)
+                msg "Usage: $0 {start|stop}" W >&2
+                exit 1
+        ;;
+esac
+
+exit 0
