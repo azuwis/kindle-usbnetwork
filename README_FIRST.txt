@@ -92,6 +92,7 @@ It's for your own good.
 
 # ifconfig usb0 down
 
+* If you own a 3G Kindle model(eg. Kindle DXG) and want to tether Kindle's 3G network, edit usbnet/etc/config, set HTTP_PROXY to true, and read the comment about this setting.
 
 === Notable changes ===
 
