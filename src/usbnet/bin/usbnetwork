@@ -29,6 +29,9 @@ SSH_DAEMON_OPTS="-P ${SSH_PID}"
 TELNET_DAEMON="${USBNET_BINDIR}/busybox"
 TELNET_DAEMON_OPTS="telnetd -F"
 TELNET_PID="${USBNET_BASEDIR}/run/telnetd.pid"
+PROXY_DAEMON="${USBNET_BINDIR}/privoxy"
+PROXY_PID="${USBNET_BASEDIR}/run/privoxy.pid"
+PROXY_DAEMON_OPTS="--pidfile ${PROXY_PID} ${USBNET_BASEDIR}/etc/privoxy/config"
 
 USBNET_IFCONFIG="${USBNET_BASEDIR}/etc/config"
 
@@ -96,6 +99,8 @@ usbnet_to_usbms() {
             msg "cleaning stale telnetd pidfile" I
             rm -f ${TELNET_PID}
         fi
+        # Stop HTTP proxy
+        /sbin/start-stop-daemon -q -p ${PROXY_PID} -x ${PROXY_DAEMON} -K
     fi
 
     msg "stopping sshd" I
@@ -170,6 +175,27 @@ usbms_to_usbnet() {
     if [ "${K3_WIFI}" == "true" ] ; then
         msg "tweaking iptables config" I
         iptables -A INPUT -i wlan0 -p tcp --dport ssh -j ACCEPT
+    fi
+
+    # Try to get proxy key and start HTTP proxy
+    if [ "${HTTP_PROXY}" == "true" ] ; then
+        if [ -f ${USBNET_BASEDIR}/etc/privoxy/user.action ] ; then
+            msg "starting http proxy" I
+            /sbin/start-stop-daemon -q -p ${PROXY_PID} -x ${PROXY_DAEMON} -S -- ${PROXY_DAEMON_OPTS}
+        else
+            msg "try to get proxy key" I
+            ( PROXY_HEADER=`${USBNET_BINDIR}/tcpdump -qnAi ppp0 -c30 -s0 port 80 2>/dev/null | grep -m1 'x-fsn: "'`
+            if echo ${PROXY_HEADER} | grep 'x-fsn: "' 2>&1 >/dev/null; then
+                cat > ${USBNET_BASEDIR}/etc/privoxy/user.action <<EOF
+{ +add-header{${PROXY_HEADER}} }
+/
+EOF
+                msg "got proxy key, starting http proxy" I
+                /sbin/start-stop-daemon -q -p ${PROXY_PID} -x ${PROXY_DAEMON} -S -- ${PROXY_DAEMON_OPTS}
+            else
+                msg "failed to get proxy key" I
+            fi ) &
+        fi
     fi
 }
 

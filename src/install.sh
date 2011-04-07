@@ -169,7 +169,7 @@ fi
 update_progressbar 28
 
 # Make sure our custom binaries are executable
-LIST="usbnetwork busybox dropbearmulti rsync usbnet-enable usbnet-disable sftp-server htop lsof"
+LIST="usbnetwork busybox dropbearmulti rsync usbnet-enable usbnet-disable sftp-server htop lsof privoxy tcpdump"
 for var in ${LIST} ; do
     [ -x ${USBNET_BINDIR}/${var} ] || chmod +x ${USBNET_BINDIR}/${var} >> ${USBNET_LOG} 2>&1 || exit ${ERR}
 done

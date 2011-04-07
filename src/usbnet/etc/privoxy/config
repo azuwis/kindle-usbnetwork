@@ -1,0 +1,6 @@
+confdir /mnt/us/usbnet/etc/privoxy
+logdir /var/log/privoxy
+actionsfile user.action
+listen-address 0.0.0.0:8118
+buffer-limit 32
+forward  / fints-g7g.amazon.com:80

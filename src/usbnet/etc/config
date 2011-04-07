@@ -22,3 +22,7 @@ K3_WIFI="false"
 # NOTE: Make sure you're able to properly login over SSH before enabling this...
 # It's obviously only useful with WiFi devices, so leave to false on non-WiFi devices
 K3_WIFI_SSHD_ONLY="false"
+
+# Start HTTP proxy for tethering if setted to true, will listen on port 8118 by default
+# For the first time, you need to launch the internal browser and visit any website, so that the pass key is captured and saved to usbnet/etc/privoxy/user.action. Now set your desktop browser's proxy to KINDLE_IP:8118
+HTTP_PROXY="false"
