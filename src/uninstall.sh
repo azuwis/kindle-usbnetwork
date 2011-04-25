@@ -1,6 +1,6 @@
 #!/bin/sh
 #
-# $Id: uninstall.sh 7343 2011-03-03 17:34:57Z NiLuJe $
+# $Id: uninstall.sh 7420 2011-04-19 02:48:56Z NiLuJe $
 #
 # diff OTA patch script
 
@@ -64,7 +64,7 @@ SLEVEL="82"
 KLEVEL="09"
 
 # Based on version 0.11 (20100124), ebs, jya
-HACKVER="0.32.N"
+HACKVER="0.33.N"
 
 # Directories
 USBNET_BASEDIR="/mnt/us/usbnet"

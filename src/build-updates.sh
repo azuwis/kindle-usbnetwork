@@ -1,11 +1,11 @@
 #! /bin/sh
 #
-# $Id: build-updates.sh 7343 2011-03-03 17:34:57Z NiLuJe $
+# $Id: build-updates.sh 7420 2011-04-19 02:48:56Z NiLuJe $
 #
 
 HACKNAME="usbnet"
 PKGNAME="usbnetwork"
-PKGVER="0.32.N"
+PKGVER="0.33.N"
 
 KINDLE_MODELS="k2 k2i dx dxi dxg k3g k3w k3gb"
 

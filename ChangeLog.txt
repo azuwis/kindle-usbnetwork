@@ -1,3 +1,65 @@
+2011-04-19 02:48  NiLuJe
+
+	* [r7420] src/build-updates.sh, src/install.sh, src/uninstall.sh,
+	  src/usbnet/info.txt:
+	  
+	  Kindle Hacks:
+	  * USBNetwork:
+	  * Tag v0.33.N
+	  * Fonts:
+	  * Tag v4.5.N
+	  * ScreenSavers:
+	  * Tag v0.21.N
+
+2011-04-16 03:43  NiLuJe
+
+	* [r7412] src/usbnet/bin/busybox, src/usbnet/bin/dropbearmulti,
+	  src/usbnet/bin/htop, src/usbnet/bin/lsof, src/usbnet/bin/rsync,
+	  src/usbnet/bin/sftp-server:
+	  
+	  Kindle Hacks:
+	  * Hmm, trusty -O2 builds... :}
+
+2011-04-16 03:09  NiLuJe
+
+	* [r7410] src/usbnet/bin/busybox, src/usbnet/bin/dropbearmulti,
+	  src/usbnet/bin/htop, src/usbnet/bin/lsof, src/usbnet/bin/rsync,
+	  src/usbnet/bin/sftp-server:
+	  
+	  Kindle Hacks:
+	  * New binaries, new gcc version (still -O3)
+
+2011-04-15 20:23  NiLuJe
+
+	* [r7407] src/usbnet/bin/busybox, src/usbnet/bin/dropbearmulti,
+	  src/usbnet/bin/htop, src/usbnet/bin/lsof, src/usbnet/bin/rsync,
+	  src/usbnet/bin/sftp-server:
+	  
+	  Kindle Hacks:
+	  * -O3 binaries. So far, it seems slower...
+
+2011-03-29 18:17  NiLuJe
+
+	* [r7387] src/usbnet/bin/rsync:
+	  
+	  Kindle Hacks:
+	  * Fonts:
+	  * Update FT snapshot
+	  * Update FC snapshot
+	  * USBNetwork:
+	  * Update rsync
+	  * X-TC:
+	  * Update ft, fc & rsync.
+	  * Let's try again to build FT without -fno-strict-aliasing, and see if
+	  it breaks :P
+
+2011-03-23 01:19  NiLuJe
+
+	* [r7379] ChangeLog:
+	  
+	  Kindle Hacks:
+	  * Update CL
+
 2011-03-23 01:08  NiLuJe
 
 	* [r7377] ChangeLog:

@@ -9,9 +9,9 @@ First things first, a huge thanks to the original creators/updaters of these hac
 * igorsk : http://igorsk.blogspot.com/, ebs : http://www.mobileread.com/forums/showthread.php?t=49350 & Jesse Vincent  : http://blog.fsck.com/ for all they did to make this possible!
 * yifanlu : http://www.mobileread.com/forums/showthread.php?t=122519 and dsmid : http://www.mobileread.com/forums/showthread.php?t=122000 for the Kindle 3.1 jailbreak!
 
-*Latest Updates (03/07/2011):*
+*Latest Updates (04/19/2011):*
 
-JailBreak v0.6.N (works on 3.1, thanks to yifanlu!), USBNetwork v0.32.N (updated a whole bunch of binaries), Fonts v4.4.N (updated libs), ScreenSavers v0.20.N.
+JailBreak v0.6.N (whitelist update), USBNetwork v0.33.N (updated a whole bunch of binaries), Fonts v4.5.N (updated libs & binaries), ScreenSavers v0.21.N (Updated binaries).
 
 
 
@@ -48,10 +48,10 @@ And that's it, your Kindle is now ready to install custom hacks!
 
 *ScreenSavers:*
 
-Download the attached kindle-ss-0.20.N.zip file, and unpack it. In here, you'll find a bunch of .bin files, and a src directory.
+Download the attached kindle-ss-0.21.N.zip file, and unpack it. In here, you'll find a bunch of .bin files, and a src directory.
 
 First, upload the correct *update_*_install.bin* file for your kindle to the root directory of your Kindle.
-For a Kindle 2 International, that would be *update_ss_0.20.N_k2i_install.bin* for example.
+For a Kindle 2 International, that would be *update_ss_0.21.N_k2i_install.bin* for example.
 
 Now, eject your Kindle, and go to *[HOME] -> [MENU] > Settings -> [MENU] > Update Your Kindle*. It should take a couple dozen of seconds.
 
@@ -64,12 +64,12 @@ If you want to randomize the sequence in which your screensavers will be shown, 
 
 *Fonts:*
 
-Download the attached kindle-fonts-4.4.N.zip file, and unpack it. In here, you'll find a bunch of .bin files, and a src directory.
+Download the attached kindle-fonts-4.5.N.zip file, and unpack it. In here, you'll find a bunch of .bin files, and a src directory.
 *NOTE:* Since v3.9.N, this package has been split in two (solely because we were over the attachment size limit :D).
-The K2, K2I, DX, DXI and DXG packages are in the kindle-fonts-4.4.N-k2.zip archive, and the K3G, K3W and K3GB packages are in the kindle-fonts-4.4.N-k3.zip archive.
+The K2, K2I, DX, DXI and DXG packages are in the kindle-fonts-4.5.N-k2.zip archive, and the K3G, K3W and K3GB packages are in the kindle-fonts-4.5.N-k3.zip archive.
 
 First, upload the correct *update_*_install.bin* file for your kindle to the root directory of your Kindle.
-For a Kindle 2 International, that would be *update_fonts_4.4.N_k2i_install.bin* for example.
+For a Kindle 2 International, that would be *update_fonts_4.5.N_k2i_install.bin* for example.
 
 Now, eject your Kindle, and go to *[HOME] -> [MENU] > Settings -> [MENU] > Update Your Kindle*. It should take a few dozen of seconds. If you're on FW 3.x, and this is your first install, it may seem to hang for about a minute or two on the "Update successful, Your Kindle is restarting..." screen, that's okay.
 
@@ -235,6 +235,12 @@ Also note that, while there is a zipfile for the usbnetwok hack attached here, I
         * Fix the rendering issues encountered with the 'light' ft override in the Symbols popup, Note edit popup and address bars.
         * Updated fallback whitelist
     
+    * *v4.5.N*:
+    
+        * Updated FT libs (new tc, updated ft)
+        * Updated fallback whitelist
+        * Updated binaries (new tc, updated fc)
+    
 
 
 **ScreenSavers*:
@@ -312,6 +318,11 @@ Also note that, while there is a zipfile for the usbnetwok hack attached here, I
     * *v0.20.N*:
     
         * Updated fallback whitelist
+    
+    * *v0.21.N*:
+    
+        * Updated fallback whitelist
+        * Updated binaries (new tc, updated coreutils)
     
 
 
